@@ -3,6 +3,8 @@ const startButton = document.getElementById('startButton');
 const pauseButton = document.getElementById('pauseButton');
 const breakButton = document.getElementById('breakButton');
 const alarmAudio = document.getElementById('alarmAudio');
+const clicksound = './mixkit-clear-mouse-clicks-2997.wav' ;
+const clickAudio = new Audio(clicksound);
 
 let countdown;
 let timer = 0; // Set initial timer to 0 for "00:00"
@@ -64,6 +66,7 @@ breakButton.addEventListener('mouseout', () => {
 });
 
 startButton.addEventListener('click', function () {
+    clickAudio.play();
     startButton.style.background='linear-gradient(90deg, hsla(141, 81%, 87%, 1) 0%, hsla(41, 88%, 75%, 1) 50%, hsla(358, 82%, 71%, 1) 100%)';
     
     clearInterval(countdown); // Reset if clicked again
@@ -87,6 +90,10 @@ startButton.addEventListener('click', function () {
 
 
 pauseButton.addEventListener('click', function () {
+
+    clickAudio.play();
+
+
     if (!isPaused) {
         // Pause the timer
         isPaused = true;
@@ -95,10 +102,16 @@ pauseButton.addEventListener('click', function () {
         // Resume the timer
         isPaused = false;
         pauseButton.textContent = 'Pause';
+        clickAudio.play();
     }
 });
 
 breakButton.addEventListener('click', function () {
+    clickAudio.play();
+    if(!alarmAudio.puased){
+        alarmAudio.pause();
+    }
+
     clearInterval(countdown); // Reset if clicked again
     timer = 15 * 60; // 15 minutes break
     isPaused = false;
