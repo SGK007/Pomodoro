@@ -26,12 +26,16 @@ header{
     display: flex; /* Use flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically if needed */
+    padding: 20px;
+   
 }
 
 #startButton, #pauseButton, #breakButton {
     display: inline-block;
     border: #f5fff6 solid;
     margin: 0 10px; /* Optional: Adjust spacing between buttons */
+   
+  
 }
 
 #breakButton{
@@ -59,13 +63,30 @@ header{
     justify-content: center;
     align-content: center;
     align-items: center;
-    border:linear-gradient(90deg, rgba(186,40,40,1) 0%, rgba(210,102,48,1) 20%, rgba(238,255,73,1) 40%, rgba(201,255,117,1) 60%, rgba(157,222,92,1) 80%, rgba(236,244,222,1) 100%);
+    border: 7px solid;
+    border-image:linear-gradient(90deg, hsla(141, 81%, 87%, 1) 0%, hsla(41, 88%, 75%, 1) 50%, hsla(358, 82%, 71%, 1) 100%);
+    border-image-slice: 1;
     height: 300px;
     width: 400px;
     margin: auto;
     background:transparent;
-   
 }
+
+/*.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 9px solid; 
+    border-image:  linear-gradient(90deg, hsla(141, 81%, 87%, 1) 0%, hsla(41, 88%, 75%, 1) 50%, hsla(358, 82%, 71%, 1) 100%);
+    border-image-slice: 1;
+    border-radius: 50%;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    background: transparent;
+}*/
+
 
 #counter{
     background: linear-gradient(90deg, hsla(141, 81%, 87%, 1) 0%, hsla(41, 88%, 75%, 1) 50%, hsla(358, 82%, 71%, 1) 100%);
