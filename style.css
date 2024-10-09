@@ -1,10 +1,32 @@
-
-body{
-    background: #134E5E;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
     
-}
+    background: linear-gradient(270deg, 
+    #0B3D36, #134E5E, #1F3D4F, #2E4A4E, 
+    #213E46, #123236, #0B2B29, #081F1F, 
+    #021F21, #031C31, #05274E, #0F3B48, 
+    #093236, #051F21, #102A49, #174850, 
+    #123236, #1D4946, #2B6468, #346D61, 
+    #3E7562, #42796E, #163C5A, #1C5265, 
+    #093236, #0B3D36, #081F1F, #05274E, 
+    #031C31, #2B6456, #174850, #0B3D36, 
+    #213E46, #163C5A, #2E4A4E, #031C31, 
+    #102A49, #134E5E, #0F3B48, #051F21, 
+    #123236, #174850, #0B2B29, #05274E);
+    background-size: 400% 400%;
+    animation: gradientShift 30s ease infinite;
+ 
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0% 0;
+    }
+  }
+  
+
 
 header{
     display: flex;
@@ -99,6 +121,7 @@ header{
     background-color: transparent;
 }
 
+/**********************************************/
 @media (max-width : 450px) {
     .container{
         max-width: 375px;
@@ -130,7 +153,7 @@ header{
     
 }
 
-
+/*******************************************************/
 @media (min-width : 900px) {
 
     .btn{
@@ -151,3 +174,43 @@ header{
 
     
 }
+
+/*****************************************/
+@media (min-width :800px) {
+
+    .whole{
+        margin: 30px auto;
+    }
+    
+
+    .container{
+        width: 500px;
+        height: 400px;
+        
+    }
+    
+    #counter{
+       font-size: 160px;
+        width: 400px;
+        height: 400px;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 19px;
+
+    }
+    
+}
+
+
+
+/*********************************************/
+@media (min-height :800px) {
+    .whole{
+       
+        margin: 50px auto;
+    }
+    
+}
+
+
