@@ -21,19 +21,23 @@ function updateDisplay() {
 }
 
 function startTimer(duration, callback) {
-    timer = duration;
+    let start = Date.now();
+    let end = start + duration * 1000; // Target end time in milliseconds
     countdown = setInterval(() => {
-        if (!isPaused && timer > 0) {
-            timer--;
+        let now = Date.now();
+        let remainingTime = Math.floor((end - now) / 1000); // Calculate remaining time in seconds
+        
+        if (!isPaused && remainingTime > 0) {
+            timer = remainingTime;
             updateDisplay();
-        }
-        if (timer <= 0) {
+        } else {
             clearInterval(countdown);
             alarmAudio.play();
             if (callback) callback();
         }
     }, 1000);
 }
+
 
 pauseButton.addEventListener('mouseover', () => {
     pauseButton.style.background = 'linear-gradient(to right, #b2ef91, #fa9372)';
