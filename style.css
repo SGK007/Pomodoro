@@ -13,7 +13,7 @@ body {
     #102A49, #134E5E, #0F3B48, #051F21, 
     #123236, #174850, #0B2B29, #05274E);
     background-size: 400% 400%;
-    animation: gradientShift 30s ease infinite;
+    /*animation: gradientShift 30s ease infinite;*/
  
   }
   
